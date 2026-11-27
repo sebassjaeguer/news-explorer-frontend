@@ -1,0 +1,257 @@
+
+.news-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(8, 29, 45, 0.1);
+}
+
+/* Fotografía de la noticia */
+
+.news-card__image-container {
+  position: relative;
+  width: 100%;
+  height: 272px;
+  flex-shrink: 0;
+}
+
+.news-card__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Botón para guardar noticias */
+
+.news-card__save-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  padding: 0;
+
+  border: none;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #b6bcbf;
+
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.news-card__save-button:hover:not([aria-disabled="true"]):not(:disabled) {
+  color: #1a1b22;
+}
+
+.news-card__save-button:focus-visible {
+  outline: 2px solid #2f71e5;
+  outline-offset: 2px;
+}
+
+.news-card__save-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* Información de la noticia */
+
+.news-card__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 0;
+  padding: 20px 24px 24px;
+}
+
+.news-card__date {
+  margin: 0 0 12px;
+  color: #b6bcbf;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.33;
+}
+
+.news-card__title {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 0 0 16px;
+
+  color: #1a1b22;
+  font-family: "Roboto Slab", serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.15;
+
+  -webkit-box-orient: vertical;
+-webkit-line-clamp: 3;
+line-clamp: 3;
+}
+
+.news-card__description {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 0 0 18px;
+
+  color: #1a1b22;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.38;
+
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 4;
+line-clamp: 4;
+}
+
+.news-card__source {
+  margin: auto 0 0;
+  color: #b6bcbf;
+  font-family: "Roboto Slab", serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+.news-card__title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.news-card__title-link:hover,
+.news-card__title-link:focus-visible {
+  text-decoration: underline;
+}
+
+/* Aviso para visitantes sin sesión */
+
+.news-card__save-button[aria-disabled="true"] {
+  cursor: default;
+}
+
+.news-card__save-button[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  box-sizing: border-box;
+  width: 140px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #1a1b22;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.news-card__save-button[data-tooltip]:hover::after,
+.news-card__save-button[data-tooltip]:focus-visible::after {
+  opacity: 1;
+  visibility: visible;
+}
+/* Tabletas */
+
+@media screen and (max-width: 1024px) {
+  .news-card__image-container {
+    height: 150px;
+  }
+
+  .news-card__save-button {
+    top: 8px;
+    right: 8px;
+  }
+
+  .news-card__content {
+    padding: 16px;
+  }
+
+  .news-card__title {
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+
+  .news-card__description {
+    margin-bottom: 12px;
+  }
+}
+
+/* Celulares */
+
+@media screen and (max-width: 600px) {
+  .news-card__image-container {
+    height: 196px;
+  }
+
+  .news-card__save-button {
+    top: 16px;
+    right: 16px;
+  }
+
+  .news-card__content {
+    padding: 16px;
+  }
+
+  .news-card__title {
+    font-size: 22px;
+  }
+
+  .news-card__description {
+    font-size: 16px;
+  }
+}
+.news-card__keyword {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  box-sizing: border-box;
+  max-width: calc(100% - 104px);
+  padding: 10px 12px;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #1a1b22;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 1024px) {
+  .news-card__keyword {
+    top: 8px;
+    left: 8px;
+    max-width: calc(100% - 64px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .news-card__keyword {
+    top: 16px;
+    left: 16px;
+    max-width: calc(100% - 80px);
+  }
+}

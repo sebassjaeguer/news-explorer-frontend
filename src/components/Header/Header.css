@@ -1,0 +1,48 @@
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  min-height: 80px;
+  padding: 0 max(40px, calc((100% - 1232px) / 2));
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.header__logo {
+  color: inherit;
+  font-family: "Roboto Slab", serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Tabletas */
+
+@media screen and (max-width: 1024px) {
+  .header {
+    min-height: 66px;
+    padding: 0 40px;
+  }
+}
+
+/* Celulares */
+
+@media screen and (max-width: 600px) {
+  .header {
+    min-height: 56px;
+    padding: 0 16px;
+  }
+
+  .header__logo {
+    font-size: 16px;
+  }
+}
