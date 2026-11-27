@@ -1,5 +1,4 @@
-
-import authorImage from "../../images/about-author.png";
+import authorImage from "../../images/about-author.webp";
 import "./About.css";
 
 function About() {
@@ -9,6 +8,8 @@ function About() {
         className="about__image"
         src={authorImage}
         alt="Autora sentada sobre el césped"
+        loading="lazy"
+        decoding="async"
       />
 
       <div className="about__content">

@@ -67,16 +67,18 @@ function NewsCard({
 
       <div className="news-card__content">
         <p className="news-card__date">{article.date}</p>
-<h3 className="news-card__title">
-  <a
-    className="news-card__title-link"
-    href={article.url}
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    {article.title}
-  </a>
-</h3>
+
+        <h3 className="news-card__title">
+          <a
+            className="news-card__title-link"
+            href={article.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {article.title}
+          </a>
+        </h3>
+
         <p className="news-card__description">{article.description}</p>
         <p className="news-card__source">{article.source}</p>
       </div>

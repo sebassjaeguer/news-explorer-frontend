@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import "./SearchForm.css";
 
@@ -45,13 +44,13 @@ function SearchForm({
           required
         />
 
-       <button
-  className="search-form__button"
-  type="submit"
-  disabled={isLoading}
->
-  {isLoading ? "Buscando…" : "Buscar"}
-</button>
+        <button
+          className="search-form__button"
+          type="submit"
+          disabled={isLoading}
+        >
+          {isLoading ? "Buscando…" : "Buscar"}
+        </button>
       </form>
 
       {searchError && (
