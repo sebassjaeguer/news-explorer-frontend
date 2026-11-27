@@ -30,7 +30,7 @@ React, React Router, JavaScript, CSS, Vite y ESLint.
 
 - Node.js y npm compatibles con las dependencias del proyecto.
 - Una clave de News API.
-- El backend de News Explorer ejecutándose en el puerto 3001 para el desarrollo local.
+- El backend de News Explorer ejecutándose en el puerto 3000 para el desarrollo local.
 
 ## Instalación
 
